@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemsModel"
+            type="java.util.List&lt;app.datatest.com.databaindingdynamic.MyModel&gt;" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:items="@{itemsModel}"></LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/getValues"
+            android:layout_below="@id/topLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GetValues" />
+    </RelativeLayout>
+
+
+</layout>
